@@ -1,0 +1,6 @@
+sleep_time: 10
+
+port: 8000
+
+websites:
+  blog: http://www.google.de
