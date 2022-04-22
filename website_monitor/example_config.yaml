@@ -1,0 +1,17 @@
+sleep_time: 10
+
+port: 8000
+
+websites:
+  blog: http://www.google.de
+
+# Leave below as is to disable unnecessary logging
+defaults:
+  - _self_
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: stdout
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .

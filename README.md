@@ -9,9 +9,8 @@ Before you install the script, I would recommend that you create a new virtual e
 ```bash
 $ git clone github.com/Emrys-Merlin/website_monitor
 $ cd website_monitor
-$ pip install -r requirements.txt
 $ pip install -e .
-$ cp example_config.yaml config.yaml
+$ cp website_monitor/example_config.yaml website_monitor/config.yaml
 ```
 ## Configuration
 

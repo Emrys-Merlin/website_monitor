@@ -25,7 +25,7 @@ def get_website_status(url: str) -> int:
     return get(url).status_code
 
 
-@hydra.main(config_path='..', config_name='config.yaml')
+@hydra.main(config_path='.', config_name='config.yaml')
 def main(cfg: DictConfig):
 
     start_http_server(port=cfg.port)
@@ -44,6 +44,12 @@ def main(cfg: DictConfig):
             gauge.labels(url=url, name=name).set(status)
 
         sleep(cfg.sleep_time)
+
+
+def entry():
+    """Workaround for hydra + packaging
+    """
+    main()
 
 
 if __name__ == "__main__":
